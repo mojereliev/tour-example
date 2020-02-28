@@ -1,0 +1,38 @@
+include ../../node_modules/bemto.pug/bemto
+
++b.HEADER.header
+  +e.container
+    +e.UL.menu
+      +e.LI.menu-item
+        +e.A.menu-link._underline(
+          href="#"
+        ) Реклама
+
+      +e.LI.menu-item
+        +e.A.menu-link._underline(
+          href="#"
+        ) Контакты
+
+    +e.UL.menu
+      +e.LI.menu-item(
+        v-for="item in mainMenuItems"
+      )
+        +e.A.menu-link(
+          :href="item.href"
+        )
+          +e.ICON.menu-icon(
+            :id="item.icon"
+          )
+
+          | {{ item.text }}
+
+    +e.UL.menu
+      +e.LI.menu-item
+        +e.A.menu-link._underline(
+          href="#"
+        ) Регистрация
+
+      +e.LI.menu-item
+        +e.A.menu-link._button(
+          href="#"
+        ) Вход

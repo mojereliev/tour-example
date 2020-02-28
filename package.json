@@ -1,0 +1,64 @@
+{
+  "name": "Nuxt-project-template",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "dev": "NODE_ENV=development cross-env HOST=0.0.0.0 PORT=8080 nuxt",
+    "build": "NODE_ENV=production nuxt build",
+    "start": "NODE_ENV=production nuxt start",
+    "generate": "NODE_ENV=production nuxt generate",
+    "mc": "babel-node make-component.js",
+    "lint": "eslint --ext .js --ignore-path .gitignore .",
+    "lint-fix": "eslint --ext .js --ignore-path .gitignore . --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "author": "Mikhail Ojereliev",
+  "contributors": [
+    "Mikhail Ojereliev <mojereliev@gmail.com> (https://github.com/mojereliev)"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/plugin-proposal-optional-chaining": "^7.2.0",
+    "babel-eslint": "^10.0.1",
+    "bemto.pug": "2.1.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^6.0.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-loader": "^3.0.3",
+    "eslint-plugin-html": "^6.0.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "exports-loader": "^0.7.0",
+    "file-loader": "^5.1.0",
+    "husky": "^4.2.3",
+    "imports-loader": "^0.8.0",
+    "json-loader": "^0.5.7",
+    "node-static": "^0.7.10",
+    "path": "0.12.7",
+    "pug-plain-loader": "^1.0.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "webpack-svgstore-plugin": "^4.0.1"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.1",
+    "@nuxtjs/moment": "^1.2.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "config": "^3.0.0",
+    "gsap": "^2.0.2",
+    "inputmask": "^4.0.8",
+    "nuxt": "^2.3.4",
+    "portal-vue": "^2.1.6",
+    "vue-awesome-swiper": "^3.1.3",
+    "vue-images-loaded": "^1.1.2",
+    "vue-observe-visibility": "^0.4.4"
+  }
+}

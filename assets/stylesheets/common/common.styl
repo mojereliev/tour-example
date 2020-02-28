@@ -1,0 +1,38 @@
+text-medium()
+  font-size 15px
+  line-height (19 / 15)
+
+link-style()
+  color currentColor
+  transition opacity .3s ease, color .3s ease
+  background none
+  text-decoration none
+  cursor pointer
+  position relative
+  -webkit-tap-highlight-color transparent
+  opacity 1
+
+  &.router-link-active
+  &.nuxt-link-active
+    opacity .4
+
+  &:hover
+    .page:not(.page_platform_mobile) &
+      opacity .6
+
+  &:disabled
+    opacity .4
+    cursor default
+
+container()
+  width (1260px + $baseOffset * 2)
+  padding-left $baseOffset
+  padding-right $baseOffset
+  margin-left auto
+  margin-right auto
+
+scroll()
+  height 100%
+  overflow hidden
+  overflow-y scroll
+  -webkit-overflow-scrolling touch
