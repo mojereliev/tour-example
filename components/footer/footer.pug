@@ -1,0 +1,28 @@
+include ../../node_modules/bemto.pug/bemto
+
++b.footer
+  +e.column
+    +e.title Мы находимся:
+    +e.text
+      | г. Минск, пр-т Независимости
+      br
+      | 11-2-422
+
+  +e.column
+    +e.title Мы работаем:
+    +e.text Сегодня до 19:00
+
+    +e.contacts
+      | Показать контакты
+
+      +e.ICON.contact-icon(id="viber")
+      +e.ICON.contact-icon(id="watsap")
+      +e.ICON.contact-icon(id="telegram")
+
+  +e.column
+    +e.text Акция от чешского оператора за самую низкую цену! Мультивиза без доплат в чистый паспорт (при раннем бронировании). Выходные дни в Праге с бесплатными экскурсиями 23, 30 ноября, 7, 14, 22 декабря.
+    +e.text
+      | Больше туров на сайте
+      +e.A.link(
+        href="#"
+      ) airtravel.by

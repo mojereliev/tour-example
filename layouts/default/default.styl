@@ -1,21 +1,23 @@
-html
-body
-  height 100%
-
 // Style for root nuxt DOM element
 body
-  > #__nuxt
+  #__nuxt
+  #__layout
     height 100%
 
 .page
   position relative
-  height 100%
-  background $white
-  color $black
+  min-height 100vh
+  background $whiteDark
+  color $blackLight
   transition background .2s ease
   overflow hidden
+  background-image url('~assets/images/pattern_bg.png')
+  background-position 50% 0%
+  padding-bottom 96px
 
   &__wrapper
+    height 100%
+
   &__container
-  &__inner
+    container()
     height 100%

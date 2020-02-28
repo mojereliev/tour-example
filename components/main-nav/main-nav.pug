@@ -1,0 +1,9 @@
+include ../../node_modules/bemto.pug/bemto
+
++b.UL.main-nav
+  +e.LI.item(
+    v-for="item in items"
+  )
+    +e.ROUTER-LINK.link(
+      :to="item.to"
+    ) {{ item.text }}

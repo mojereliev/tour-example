@@ -1,0 +1,31 @@
+.label-mark
+  position absolute
+  left 0
+  top 0
+  margin-left -5px
+  color $white
+  background $redLight
+  z-index 10
+  min-width 144px
+  min-height 54px
+  display flex
+  align-items center
+  justify-content center
+  flex-direction column
+  padding 6px 20px 5px 25px
+
+  &:after
+    triangle(5px, 6px, 'topRight', $redDark)
+    content ''
+    position absolute
+    top 100%
+    left 0
+
+  &__text
+    font-size 12px
+    line-height (14 / 12)
+    margin-bottom 1px
+
+  &__value
+    font-size 15px
+    line-height (18 / 15)

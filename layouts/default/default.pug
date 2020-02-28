@@ -12,11 +12,16 @@ include ../../node_modules/bemto.pug/bemto
     @enter="fadeIn"
   )
     +e.wrapper(v-show="app.isReady")
-      transition(
-        @enter="fadeIn",
-        @leave="fadeOut"
-      )
-        +e.container
-          headerModule
+      headerModule
 
-          nuxt
+      +e.container
+        mainNav
+
+        transition(
+          @enter="fadeIn",
+          @leave="fadeOut"
+        )
+          +e.inner
+            nuxt
+
+        footerModule

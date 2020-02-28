@@ -1,7 +1,9 @@
 import {mapState, mapGetters, mapMutations} from 'vuex';
 import {TimelineMax, CSSPlugin, TweenMax, EasePack} from 'gsap'; // eslint-disable-line
 
+import footerModule from '~/components/footer/footer.vue';
 import headerModule from '~/components/header/header.vue';
+import mainNav from '~/components/main-nav/main-nav.vue';
 
 import throttle from 'assets/helpers/throttle';
 import {fadeIn, fadeOut} from 'assets/helpers/animations.js';
@@ -16,7 +18,9 @@ const SwipeDetect = process.browser
 
 export default {
   components: {
-    headerModule
+    footerModule,
+    headerModule,
+    mainNav
   },
 
   data() {

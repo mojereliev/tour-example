@@ -24,6 +24,26 @@ link-style()
     opacity .4
     cursor default
 
+link-bordered-style()
+  color currentColor
+  position relative
+  text-decoration none
+
+  &:after
+    content ''
+    position absolute
+    width 100%
+    height 1px
+    background currentColor
+    left 0
+    top 100%
+    transition .3s
+    margin-top 2px
+
+  &:hover
+    &:after
+      opacity 0
+
 container()
   width (1260px + $baseOffset * 2)
   padding-left $baseOffset

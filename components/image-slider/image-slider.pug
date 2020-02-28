@@ -1,0 +1,42 @@
+include ../../node_modules/bemto.pug/bemto
++b.image-slider
+  +e.BUTTON.search-button(
+    type="button"
+  )
+    +e.ICON.search-button-icon(
+      id="search"
+    )
+
+    .hidden open
+
+  +e.slider-wrapper
+    +e.slider.swiper(
+      v-if="swiperOptions",
+      v-swiper:mySwiper="swiperOptions",
+      ref="swiper"
+    )
+      .swiper-wrapper
+        +e.slide.swiper-slide(
+          v-for="item in slides",
+        )
+          img.image-slider__image(
+            :src="item.image"
+          )
+
+    +e.BUTTON.button-prev(
+      type="button"
+    )
+      +e.ICON.button-icon(
+        id="arrow-left"
+      )
+
+      .hidden previous
+
+    +e.BUTTON.button-next(
+      type="button"
+    )
+      +e.ICON.button-icon(
+        id="arrow-right"
+      )
+
+      .hidden next

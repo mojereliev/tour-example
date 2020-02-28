@@ -1,0 +1,16 @@
+include ../../node_modules/bemto.pug/bemto
+
++b.rating
+  +e.item(
+    v-for="(item, index) in 5"
+  )
+    svg(viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg")
+      path(
+        fill-rule="evenodd",
+        clip-rule="evenodd",
+        d="M7.03504 9.77373L3.30518 12.4793L4.72576 8.09594L1 5.38471L5.60783 5.38122L7.03504 1L8.46225 5.38122L13.0701 5.38471L9.34431 8.09594L10.7649 12.4793L7.03504 9.77373Z",
+        :fill="index < value ? '#FF4646' : 'transparent'",
+        stroke="#FF4646",
+        stroke-linecap="round",
+        stroke-linejoin="round"
+      )

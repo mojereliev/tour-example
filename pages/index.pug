@@ -1,3 +1,129 @@
 include ../node_modules/bemto.pug/bemto
 
 +b.index-root
+  breadcrumbs
+
+  +e.body
+    +e.left
+      labelMark(
+        text="Горящий тур",
+        value="-15 %"
+      )
+
+      +e.IMAGE-SLIDER.slider(
+        :slides="slides"
+      )
+
+      +e.name ООО «АЭРОТРЕВЕЛ»
+
+    +e.right
+      +e.H1.heading Тур в отель Gelina Village Hotel Resort&Spa
+      +e.subheading №141378
+
+      +e.RATING.rating(
+        :value="4"
+      )
+
+      +e.head
+        +e.direction
+          img.index-root__direction-image(
+            src="/images/greece.png"
+          )
+          | Греция > Пелопоннес-Илия
+
+        +e.A.link(
+          href="#"
+        ) Нет такого тура?
+
+      +e.info-table
+        +e.BUTTON.info-button(
+          type="button"
+        ) i
+
+        +e.info-body
+          +e.info-text
+            +e.info-item
+              | 12 дней / 11 ночей
+
+              +e.info-target
+                +e.ICON.info-target-icon(
+                  id="ship"
+                )
+                | из Минска через 5 дней
+
+            +e.info-item
+              | 31 августа 2018 – 11 cентября 2018
+
+              +e.BUTTON.info-calendar(
+                type="button"
+              )
+                +e.ICON.info-calendar-icon(
+                  id="calendar"
+                )
+                | еще даты
+
+            +e.info-item Питание: All (все включено)
+
+          +e.features
+            +e.feature
+              +e.ICON.feature-icon(
+                id="line3"
+              )
+              +e.feature-text 3- ая линия
+
+            +e.feature
+              +e.ICON.feature-icon(
+                id="pebble"
+              )
+              +e.feature-text галька
+
+        +e.prices
+          +e.price._primary
+            +e.price-value 1 970
+            +e.price-currency
+              | BYN
+              br
+              | 882$
+
+            +e.price-description
+              | Цена за
+
+              +e.price-icons
+                +e.ICON.price-icon(
+                  id="adult"
+                )
+
+          +e.price
+            +e.price-value 3 940
+            +e.price-currency
+              | BYN
+              br
+              | 1 882$
+
+            +e.price-description
+              | Цена за
+
+              +e.price-icons
+                +e.ICON.price-icon(
+                  id="adult"
+                )
+
+                +e.price-icons-plus +
+
+                +e.ICON.price-icon(
+                  id="child"
+                )
+                +e.ICON.price-icon(
+                  id="child"
+                )
+
+      +e.controls
+        +e.control-wrapper
+          +e.BUTTON.control(
+            type="button"
+          ) Заказать тур
+
+        +e.control-wrapper
+          +e.BUTTON.control._primary(
+            type="button"
+          ) Перезвоните мне
