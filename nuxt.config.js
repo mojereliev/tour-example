@@ -19,7 +19,7 @@ const keywords = '';
 const description = '';
 const ogImage = '';
 
-module.exports = {
+export default {
   head: {
     title: title,
     meta: [
@@ -63,6 +63,7 @@ module.exports = {
     {src: '~plugins/swiper.js', ssr: false}
   ],
   router: {
+    base: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/tour-example/' : '/',
     middleware: [
       'theme'
     ]
