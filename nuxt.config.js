@@ -60,7 +60,8 @@ export default {
     '~plugins/directives.js',
     '~plugins/svgstore.js',
     '~plugins/gsap.js',
-    {src: '~plugins/swiper.js', ssr: false}
+    {src: '~plugins/swiper.js', ssr: false},
+    '~/plugins/static-mixin.js'
   ],
   router: {
     base: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/tour-example/' : '/',
